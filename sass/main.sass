@@ -1,7 +1,18 @@
+*
+	box-sizing: border-box
+
+@font-face
+	font-family: SFUIDisplay
+	src: url(../fonts/SFUIDisplay/SFUIDisplay-Regular.ttf)
+	font-weight: normal
+
 .wrapper
 	width: 100%
 	margin: 0 auto
+	background-color: #ffffff
 
+.header
+	margin-bottom: -120px
 .header__logo-img
 	width: 100%
 
@@ -9,17 +20,24 @@
 	margin-top: 35px
 
 .upper-form
-	margin-top: -120px
-.upper-form.container-fluid 
+	height: 100%//800px
+	width: 100%
+	padding-bottom: 90px
+.upper-form.container-fluid
 	padding-right: 0
 	padding-left: 0
 .upper-form__background
-	height: 100%
+	height: 110vh
+	width: auto
 	background-image: url(../img/bg-header-80.jpg)
 	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	//width: 100%
 .upper-form__container
-	padding-top: 300px
-.pper-form__title
+	margin-top: 16%//250px
+	//margin-bottom: 200px
+h1.upper-form__title
 	font-family: SFUIDisplay
 	font-size: 16px * 2
 	font-weight: normal
@@ -28,7 +46,8 @@
 	line-height: 1.31
 	letter-spacing: normal
 	color: #000000
-.upper-form__sub-title
+	margin-bottom: 13px * 2
+h2.upper-form__sub-title
 	font-family: SFUIDisplay
 	font-size: 10.5px * 2
 	font-weight: normal
@@ -37,3 +56,278 @@
 	line-height: 1.52
 	letter-spacing: normal
 	color: #000000
+	margin-bottom: 20px * 2
+	padding-right: 80px * 2
+
+.upper-form__wrap
+	width: 100%
+.upper-form__block
+	display: flex
+	position: relative
+.upper-form__field-block
+	flex-basis: 37%
+	flex-grow: 0
+	flex-shrink: 0
+	position: relative
+.upper-form__field-block:nth-child(2)
+	padding-left: 20px
+.upper-form__button
+	flex-basis: auto
+	border-radius:  0 3.5px 3.5px 0
+	background-color: #540cfa
+	border: 1px solid #540cfa
+	font-family: SFUIDisplay
+	font-size: 8px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	color: #ffffff
+	padding-left: 10.5px
+	padding-right: 10.5px
+.upper-form__field
+	width: 100%
+	border-radius: 3.5px
+	border: 1px solid #fff
+	box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.05), 0 3px 6px 0 rgba(0, 0, 0, 0.05)
+	background-color: #ffffff
+	//opacity: 0.3
+	font-family: SFUIDisplay
+	font-size: 8px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	color: rgba(0, 0, 0, 0.3)
+	padding: 18.5px 9.5px 8.5px 9.5px
+	&:focus
+		color: #000
+.upper-form__field.field-phone
+	border-radius: 3.5px 0 0 3.5px
+.upper-form__name-field
+	font-family: SFUIDisplay
+	font-size: 6px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	color: #540cfa
+	position: absolute
+	left: 9.5px
+	top: 5px
+.upper-form__name-field.field-phone
+	left: 29.5px
+/*  */
+.reasons
+	padding-bottom: 59px * 2
+.reasons__pred-title
+	opacity: 0.8
+	font-family: SFUIDisplay
+	font-size: 9px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+h1.reasons__title
+	font-family: SFUIDisplay
+	font-size: 21px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.14
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+	margin-top: 13px * 2
+	margin-bottom: 13px * 2
+	padding-left: 77px * 2
+	padding-right: 77px * 2
+h2.reasons_sub-title
+	opacity: 0.8
+	font-family: SFUIDisplay
+	font-size: 10.5px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.52
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+	margin-bottom: 106px * 2
+	padding-left: 138px * 2
+	padding-right: 138px * 2
+
+.reasons__container-icon
+	text-align: center
+	margin:
+		left: calc(50% - 45px)
+.container-icon__picture
+	width: 60px * 1.5
+	height: 60px * 1.5
+	border-radius: 7px
+	box-shadow: 0 1px 2px 0 rgba(36, 8, 128, 0.15)
+	background-image: linear-gradient(135deg, #9c09db, #1c0fd7)
+.container-icon__picture-img
+	width: 40.5px * 1.5
+	height: 32.4px * 1.5
+	margin: 
+		top: calc(50% - 24px)
+		left: calc(50% - 45px)
+.reasons__container-title
+	font-family: SFUIDisplay
+	font-size: 9px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+	margin-top: 13px * 2
+	margin-bottom: 5.5px * 2
+.reasons__container-sub-title
+	opacity: 0.7
+	font-family: SFUIDisplay
+	font-size: 8px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.5
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+.container-icon__picture.eco
+	box-shadow: 0 1px 2px 0 rgba(128, 32, 0, 0.15)
+	background-image: linear-gradient(135deg, #f2c314, #fc3832)
+.container-icon__picture.sun
+	box-shadow: 0 1px 2px 0 rgba(8, 38, 168, 0.15)
+	background-image: linear-gradient(135deg, #32fbfc, #3214f2)
+/*  */
+.schemes__block
+	margin-top: 0
+	margin-bottom: 0
+.schemes__second-row .schemes__block
+	margin-top: -31px * 2
+	margin-bottom: -31px * 2
+.schemes__picture-one
+	width: 100%
+	height: auto
+.schemes__column
+	display: flex
+	//justify-content: center
+	align-items: center
+	//align-content: center
+.schemes__text-block
+	//align-self: center
+	display: flex
+	flex-direction: column
+.schemes__text-paragraph
+	font-family: SFUIDisplay
+	font-size: 16px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.31
+	letter-spacing: normal
+	color: #000000
+	margin:
+		bottom: 20px
+.schemes__text-link
+	opacity: 0.8
+	font-family: SFUIDisplay
+	font-size: 9px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	color: #000000
+	text-decoration: none
+	position: relative
+	margin:
+		left: 59px
+	padding:
+		left: 13px * 2
+	&:after
+		content: ""
+		position: absolute
+		width: 59px * 2
+		border-bottom: 2px solid #979797
+		left: -59px * 2
+		top: 50%
+	&:hover
+		text-decoration: none
+		color: #000000
+.schemes__text-link.scheme-picture_right
+	position: relative
+	text-align: right
+	margin:
+		right: 59px
+	padding:
+		right: 13px * 2
+	&:after
+		position: absolute
+		left: 100%
+		right: -59px * 2
+		z-index: 1
+.schemes__second-row
+	flex-direction: row-reverse
+/*  */
+.lower-form__container
+
+.lower-form__logo
+	text-align: center
+	margin: 0 auto
+.lower-form__title
+	font-family: SFUIDisplay
+	font-size: 17.5px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.14
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+	margin: 0 auto
+	padding-top: 18px * 2
+.lower-form__sub-title
+	font-family: SFUIDisplay
+	font-size: 9px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.5
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	text-align: center
+	margin: 0 auto
+	padding-top: 26px * 2
+.lower-form .upper-form__wrap
+	margin: 0 auto
+	padding-top: 16.5px * 2
+	padding-bottom: 152px
+/*
+ * @media
+ */
+//@media (max-width: 576px)
+
+//@media (min-width: 576px)
+
+//@media (min-width: 768px)
+
+//@media (min-width: 992px)
+
+//@media (min-width: 1200px)
