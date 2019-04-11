@@ -123,8 +123,12 @@ h2.upper-form__sub-title
 	letter-spacing: normal
 	color: rgba(0, 0, 0, 0.3)
 	padding: 18.5px 9.5px 8.5px 9.5px
+	&:active
+		color: rgba(0, 0, 0, 0.8)
+	&:hover
+		color: rgba(0, 0, 0, 0.8)
 	&:focus
-		color: #000
+		color: rgba(0, 0, 0, 0.8)
 .upper-form__field.field-phone
 	border-radius: 3.5px 0 0 3.5px
 .upper-form__name-field
@@ -265,6 +269,7 @@ h2.reasons_sub-title
 	margin:
 		bottom: 20px
 .schemes__text-link
+	cursor: pointer
 	opacity: 0.8
 	font-family: SFUIDisplay
 	font-size: 9px * 2
@@ -347,8 +352,10 @@ h2.reasons_sub-title
 .popup__row
 	//width: 800px
 	position: fixed
-	bottom: 20px
+	bottom: -200px
 	right: 20px
+	display: block
+	transition: bottom 2s ease
 
 .popup__container
 	background-color: #fff
@@ -362,12 +369,14 @@ h2.reasons_sub-title
 .popup__content
 	position: relative
 	padding: 25px
+	overflow: hidden
 .popup__close-button
 	position: absolute
 	top: 7px
 	right: 14px
 	//width: 20px
 	//height: 20px
+	cursor: pointer
 .popup__close-btn
 	font-size: 20px
 	line-height: 1
@@ -394,9 +403,10 @@ h2.reasons_sub-title
 	opacity: 0.6
 .popup__info-button
 	width: 100%
-	border-radius:  0 3.5px 3.5px 0
-	background-color: #540cfa
-	border: 1px solid #540cfa
+	margin-top: calc(50% - 24px)
+	border-radius: 3.5px
+	background-color: #141414
+	border: 1px solid #141414
 	font-family: SFUIDisplay
 	font-size: 8px * 2
 	font-weight: normal
@@ -405,8 +415,70 @@ h2.reasons_sub-title
 	line-height: normal
 	letter-spacing: normal
 	color: #ffffff
-	padding-left: 10.5px
-	padding-right: 10.5px
+	padding:
+		left: 9.5px
+		right: 9.5px
+		top: 13.5px
+		bottom: 13.5px
+.popup__end-position
+	display: none
+.popup__end-position .upper-form__block
+	flex-wrap: wrap
+.popup__end-position .upper-form__field-block
+	flex-basis: 100%
+.popup__end-position .upper-form__button
+	flex-basis: 100%
+.popup__end-position .upper-form__field-block
+	margin-bottom: 15px
+.popup__end-position .upper-form__field-block:nth-child(2)
+	padding-left: 0px
+.popup__end-position .upper-form__button
+	padding: 13.5px 9.5px 13.5px 9.5px
+	border-radius: 3.5px
+.popup__end-position .popup__sub-title
+	padding-bottom: 15px
+/*. */
+.big-modal__section
+	width: 100%
+	height: 100%
+	position: relative
+	display: none
+.big-modal__row
+	width: 100%
+	height: 100%
+	position: fixed
+	z-index: 10
+	top: 0
+	left: 0
+	right: 0
+	background-color: rgba(18, 21, 35, 0.19)
+.big-modal__container
+	margin: 0 auto
+	padding-top: 10%
+.big-modal__wrap
+	background-color: #fff
+	box-shadow: 0 20px 60px -2px rgba(18, 21, 35, 0.19)
+	border: 1px solid #fff
+	border-radius: 5px
+	box-sizing: border-box
+	margin:
+		left: -15px
+		right: -15px
+.big-modal__wrap .popup__end-position
+	display: block
+.big-modal__sucsess
+	display: none
+	font-family: SFUIDisplay
+	font-size: 32px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.31
+	letter-spacing: normal
+	color: #000000
+	padding:
+		top: 30px
+		bottom: 30px
 /*
  * @media
  */
@@ -533,6 +605,8 @@ h2.reasons_sub-title
 			bottom: 13.5px
 	.upper-form__field.field-phone
 		border-radius:  3.5px 3.5px 3.5px 3.5px
+	.popup__section .popup__info-button
+		margin-top: 24px
 
 @media (min-width: 576px)
 	.header
@@ -657,6 +731,8 @@ h2.reasons_sub-title
 			bottom: 13.5px
 	.upper-form__field.field-phone
 		border-radius:  3.5px 3.5px 3.5px 3.5px
+	.popup__section .popup__info-button
+		margin-top: 24px
 
 @media (min-width: 768px)
 	.header
@@ -781,6 +857,8 @@ h2.reasons_sub-title
 			bottom: 13.5px
 	.upper-form__field.field-phone
 		border-radius:  3.5px 3.5px 3.5px 3.5px
+	.popup__section .popup__info-button
+	margin-top: calc(50% - 12px)
 
 @media (min-width: 992px)
 	.header
@@ -906,6 +984,8 @@ h2.reasons_sub-title
 		border-radius: 3.5px 0 0 3.5px
 	.upper-form__field-block
 		margin-bottom: 0px
+	.popup__section .popup__info-button
+		margin-top: calc(50% - 24px)
 
 @media (min-width: 1200px)
 	.header
@@ -917,7 +997,7 @@ h2.reasons_sub-title
 	.upper-form__container
 		margin-top: 25%
 	.upper-form__background
-		height: 110vh
+		height: 120vh
 		width: auto
 		background-size: cover
 	h2.upper-form__sub-title
