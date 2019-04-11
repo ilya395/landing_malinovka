@@ -5,7 +5,8 @@
 	font-family: SFUIDisplay
 	src: url(../fonts/SFUIDisplay/SFUIDisplay-Regular.ttf)
 	font-weight: normal
-
+.container
+	overflow: hidden
 .wrapper
 	width: 100%
 	margin: 0 auto
@@ -13,11 +14,31 @@
 
 .header
 	margin-bottom: -120px
+	background-color: transparent
 .header__logo-img
 	width: 100%
 
 .header__logo-img
 	margin-top: 35px
+
+.header__phone-button
+	display: flex
+	justify-content: flex-end
+.header__phone-btn
+	//width: 100%
+	//height: auto
+	border-radius: 3.5px
+	border: 1px solid #540cfa
+	box-shadow: 0 10px 20px 0 rgba(60, 9, 179, 0.3)
+	background-color: #540cfa
+	padding: 3px*3 20.5px*3 3px*3 20.5px*3
+	box-sizing: border-box
+	margin:
+		top: 20px
+		bottom: 20px
+.header__phone-img
+	width: 10px * 3
+	height: 10px * 3
 
 .upper-form
 	height: 100%//800px
@@ -319,15 +340,688 @@ h2.reasons_sub-title
 	margin: 0 auto
 	padding-top: 16.5px * 2
 	padding-bottom: 152px
+/*.popup */
+.popup__section
+	width: 100%
+	position: relative
+.popup__row
+	//width: 800px
+	position: fixed
+	bottom: 20px
+	right: 20px
+
+.popup__container
+	background-color: #fff
+	box-shadow: 0 20px 60px -2px rgba(18, 21, 35, 0.19)
+	border: 1px solid #fff
+	border-radius: 5px
+	box-sizing: border-box
+	margin:
+		left: -15px
+		right: -15px
+.popup__content
+	position: relative
+	padding: 25px
+.popup__close-button
+	position: absolute
+	top: 7px
+	right: 14px
+	//width: 20px
+	//height: 20px
+.popup__close-btn
+	font-size: 20px
+	line-height: 1
+	color: rgba(18, 21, 35, 0.19)
+.popup__title
+	font-family: SFUIDisplay
+	font-size: 12px * 2
+	font-weight: bold
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.31
+	letter-spacing: normal
+	color: #000000
+.popup__sub-title
+	font-family: SFUIDisplay
+	font-size: 8px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.52
+	letter-spacing: normal
+	color: #000000
+	padding-top: 15px
+	opacity: 0.6
+.popup__info-button
+	width: 100%
+	border-radius:  0 3.5px 3.5px 0
+	background-color: #540cfa
+	border: 1px solid #540cfa
+	font-family: SFUIDisplay
+	font-size: 8px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	color: #ffffff
+	padding-left: 10.5px
+	padding-right: 10.5px
 /*
  * @media
  */
-//@media (max-width: 576px)
+@media (max-width: 576px)
+	.header
+		margin-bottom: 0px
+		background-color: #fff
+	.header__logo-img
+		margin-top: 14px
+		margin-bottom: 14px
+	.header__phone-btn
+		display: block
+	.upper-form__container
+		margin-top: 65%
+	.upper-form__background
+		height: auto
+		width: 100vw
+		background-size: 100% auto
+		background-position: top center
+	h2.upper-form__sub-title
+		padding-right: 0px
+	.upper-form__wrap
+		display: none
+	h1.reasons__title
+		padding:
+			left: 0px
+			right: 0px
+	h2.reasons_sub-title
+		padding:
+			left: 0px
+			right: 0px
+	.reasons__container-wrap
+		margin-bottom: 42px * 2
+	.reasons__container-title
+		text-align: left
+	.reasons__container-sub-title
+		text-align: left
+	.reasons__container-icon
+		margin-left: 0px
+	.container-icon__picture
+		border-radius: 7px * 4
+	.schemes__first-row
+		flex-direction: column-reverse
+	.schemes__second-row
+		flex-direction: column-reverse
+	.schemes__third-row
+		flex-direction: column-reverse
+	.schemes__block
+		margin-top: -31px * 2
+		margin-bottom: -31px * 2
+	//.schemes__second-row .schemes__block
+		//margin-top: -31px * 2
+		//margin-bottom: -31px * 2
+	.schemes__text-link
+		opacity: 0.8
+		font-size: 9px * 2
+		color: #000000
+		text-decoration: none
+		position: relative
+		margin:
+			left: 59px
+		padding:
+			left: 13px * 2
+		&:after
+			content: ""
+			position: absolute
+			width: 59px
+			border-bottom: 2px solid #979797
+			left: -59px
+			top: 50%
+		&:hover
+			text-decoration: none
+			color: #000000
+	.schemes__text-link.scheme-picture_right
+		position: relative
+		text-align: left
+		margin:
+			right: 0
+		padding:
+			right: 0
+		&:after
+			position: absolute
+			left: -59px
+			right: -59px * 2
+			z-index: 1
+	.lower-form__title
+		padding:
+			top: 10px
+		margin:
+			left: 0
+			right: 0
+	.lower-form .upper-form__wrap
+		display: block
+	.upper-form__block
+		display: flex
+		position: relative
+		flex-wrap: wrap
+	.upper-form__field-block
+		flex-basis: 100%
+		flex-grow: 0
+		flex-shrink: 0
+		position: relative
+		margin-bottom: 9px * 2
+	.upper-form__field-block:nth-child(2)
+		padding-left: 0px
+	.upper-form__button
+		width: 100%
+		flex-basis: auto
+		border-radius:  3.5px 3.5px 3.5px 3.5px
+		background-color: #540cfa
+		border: 1px solid #540cfa
+		font-family: SFUIDisplay
+		font-size: 8px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #ffffff
+		padding:
+			left: 9.5px
+			right: 9.5px
+			top: 13.5px
+			bottom: 13.5px
+	.upper-form__field.field-phone
+		border-radius:  3.5px 3.5px 3.5px 3.5px
 
-//@media (min-width: 576px)
+@media (min-width: 576px)
+	.header
+		margin-bottom: 0px
+		background-color: #fff
+	.header__logo-img
+		margin-top: 14px
+		margin-bottom: 14px
+	.header__phone-btn
+		display: block
+	.upper-form__container
+		margin-top: 65%
+	.upper-form__background
+		height: auto
+		width: 100vw
+		background-size: 100% auto
+		background-position: top center
+	h2.upper-form__sub-title
+		padding-right: 0px
+	.upper-form__wrap
+		display: none
+	h1.reasons__title
+		padding:
+			left: 0px
+			right: 0px
+	h2.reasons_sub-title
+		padding:
+			left: 0px
+			right: 0px
+	.reasons__container-wrap
+		margin-bottom: 42px * 2
+	.reasons__container-title
+		text-align: left
+	.reasons__container-sub-title
+		text-align: left
+	.reasons__container-icon
+		margin-left: 0px
+	.container-icon__picture
+		border-radius: 7px * 4
+	.schemes__first-row
+		flex-direction: column-reverse
+	.schemes__second-row
+		flex-direction: column-reverse
+	.schemes__third-row
+		flex-direction: column-reverse
+	.schemes__block
+		margin-top: -31px * 2
+		margin-bottom: -31px * 2
+	//.schemes__second-row .schemes__block
+		//margin-top: -31px * 2
+		//margin-bottom: -31px * 2
+	.schemes__text-link
+		opacity: 0.8
+		font-size: 9px * 2
+		color: #000000
+		text-decoration: none
+		position: relative
+		margin:
+			left: 59px
+		padding:
+			left: 13px * 2
+		&:after
+			content: ""
+			position: absolute
+			width: 59px
+			border-bottom: 2px solid #979797
+			left: -59px
+			top: 50%
+		&:hover
+			text-decoration: none
+			color: #000000
+	.schemes__text-link.scheme-picture_right
+		position: relative
+		text-align: left
+		margin:
+			right: 0
+		padding:
+			right: 0
+		&:after
+			position: absolute
+			left: -59px
+			right: -59px * 2
+			z-index: 1
+	.lower-form__title
+		padding:
+			top: 10px
+		margin:
+			left: 0
+			right: 0
+	.lower-form .upper-form__wrap
+		display: block
+	.upper-form__block
+		display: flex
+		position: relative
+		flex-wrap: wrap
+	.upper-form__field-block
+		flex-basis: 100%
+		flex-grow: 0
+		flex-shrink: 0
+		position: relative
+		margin-bottom: 9px * 2
+	.upper-form__field-block:nth-child(2)
+		padding-left: 0px
+	.upper-form__button
+		width: 100%
+		flex-basis: auto
+		border-radius:  3.5px 3.5px 3.5px 3.5px
+		background-color: #540cfa
+		border: 1px solid #540cfa
+		font-family: SFUIDisplay
+		font-size: 8px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #ffffff
+		padding:
+			left: 9.5px
+			right: 9.5px
+			top: 13.5px
+			bottom: 13.5px
+	.upper-form__field.field-phone
+		border-radius:  3.5px 3.5px 3.5px 3.5px
 
-//@media (min-width: 768px)
+@media (min-width: 768px)
+	.header
+		margin-bottom: 0px
+		background-color: #fff
+	.header__logo-img
+		margin-top: 14px
+		margin-bottom: 14px
+	.header__phone-btn
+		display: none
+	.upper-form__container
+		margin-top: 65%
+	.upper-form__background
+		height: auto
+		width: 100vw
+		background-size: 100% auto
+		background-position: top center
+	h2.upper-form__sub-title
+		padding-right: 0px
+	.upper-form__wrap
+		display: block
+	h1.reasons__title
+		padding:
+			left: 0px
+			right: 0px
+	h2.reasons_sub-title
+		padding:
+			left: 0px
+			right: 0px
+	.reasons__container-wrap
+		margin-bottom: 42px * 2
+	.reasons__container-title
+		text-align: left
+	.reasons__container-sub-title
+		text-align: left
+	.reasons__container-icon
+		margin-left: 0px
+	.container-icon__picture
+		border-radius: 7px * 4
+	.schemes__first-row
+		flex-direction: column-reverse
+	.schemes__second-row
+		flex-direction: column-reverse
+	.schemes__third-row
+		flex-direction: column-reverse
+	.schemes__block
+		margin-top: -31px * 2
+		margin-bottom: -31px * 2
+	//.schemes__second-row .schemes__block
+		//margin-top: -31px * 2
+		//margin-bottom: -31px * 2
+	.schemes__text-link
+		opacity: 0.8
+		font-size: 9px * 2
+		color: #000000
+		text-decoration: none
+		position: relative
+		margin:
+			left: 59px
+		padding:
+			left: 13px * 2
+		&:after
+			content: ""
+			position: absolute
+			width: 59px
+			border-bottom: 2px solid #979797
+			left: -59px
+			top: 50%
+		&:hover
+			text-decoration: none
+			color: #000000
+	.schemes__text-link.scheme-picture_right
+		position: relative
+		text-align: left
+		margin:
+			right: 0
+		padding:
+			right: 0
+		&:after
+			position: absolute
+			left: -59px
+			right: -59px * 2
+			z-index: 1
+	.lower-form__title
+		padding:
+			top: 10px
+		margin:
+			left: 0
+			right: 0
+	.lower-form .upper-form__wrap
+		display: block
+	.upper-form__block
+		display: flex
+		position: relative
+		flex-wrap: wrap
+	.upper-form__field-block
+		flex-basis: 100%
+		flex-grow: 0
+		flex-shrink: 0
+		position: relative
+		margin-bottom: 9px * 2
+	.upper-form__field-block:nth-child(2)
+		padding-left: 0px
+	.upper-form__button
+		width: 100%
+		flex-basis: auto
+		border-radius:  3.5px 3.5px 3.5px 3.5px
+		background-color: #540cfa
+		border: 1px solid #540cfa
+		font-family: SFUIDisplay
+		font-size: 8px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #ffffff
+		padding:
+			left: 9.5px
+			right: 9.5px
+			top: 13.5px
+			bottom: 13.5px
+	.upper-form__field.field-phone
+		border-radius:  3.5px 3.5px 3.5px 3.5px
 
-//@media (min-width: 992px)
+@media (min-width: 992px)
+	.header
+		margin-bottom: -120px
+		background-color: transparent
+	.header__logo-img
+		margin-top: 35px
+		margin-bottom: 0px
+	.upper-form__container
+		margin-top: 25%
+	.upper-form__background
+		height: 120vh
+		width: auto
+		background-size: cover
+	h2.upper-form__sub-title
+		padding-right: 160px
+	.upper-form__wrap
+		display: block
+	h1.reasons__title
+		padding:
+			left: 154px
+			right: 154px
+	h2.reasons_sub-title
+		padding:
+			left: 276px
+			right: 276px
+	.reasons__container-wrap
+		margin-bottom: 0px
+	.reasons__container-title
+		text-align: center
+	.reasons__container-sub-title
+		text-align: center
+	.reasons__container-icon
+		margin-left: calc(50% - 45px)
+	.container-icon__picture
+		border-radius: 7px
+	.schemes__first-row
+		flex-direction: row
+	.schemes__second-row
+		flex-direction: row-reverse
+	.schemes__third-row
+		flex-direction: row
+	.schemes__block
+		margin-top: 0
+		margin-bottom: 0
+	.schemes__second-row .schemes__block
+		margin-top: -31px * 2
+		margin-bottom: -31px * 2
+	.schemes__text-link
+		opacity: 0.8
+		font-family: SFUIDisplay
+		font-size: 9px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #000000
+		text-decoration: none
+		position: relative
+		margin:
+			left: 59px
+		padding:
+			left: 13px * 2
+		&:after
+			content: ""
+			position: absolute
+			width: 59px * 2
+			border-bottom: 2px solid #979797
+			left: -59px * 2
+			top: 50%
+		&:hover
+			text-decoration: none
+			color: #000000
+	.schemes__text-link.scheme-picture_right
+		position: relative
+		text-align: right
+		margin:
+			right: 59px
+		padding:
+			right: 13px * 2
+		&:after
+			position: absolute
+			left: 100%
+			right: -59px * 2
+			z-index: 1
+	.lower-form__title
+		padding:
+			top: 36px
+		margin:
+			left: auto
+			right: auto
+	.upper-form__block
+		display: flex
+		flex-wrap: nowrap
+		position: relative
+	.upper-form__field-block
+		flex-basis: 37%
+		flex-grow: 0
+		flex-shrink: 0
+		position: relative
+	.upper-form__field-block:nth-child(2)
+		padding-left: 20px
+	.upper-form__button
+		flex-basis: auto
+		border-radius:  0 3.5px 3.5px 0
+		background-color: #540cfa
+		border: 1px solid #540cfa
+		font-family: SFUIDisplay
+		font-size: 8px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #ffffff
+		padding:
+			left: 10.5px
+			right: 10.5px
+			top: 0
+			bottom: 0
+	.upper-form__field.field-phone
+		border-radius: 3.5px 0 0 3.5px
+	.upper-form__field-block
+		margin-bottom: 0px
 
-//@media (min-width: 1200px)
+@media (min-width: 1200px)
+	.header
+		margin-bottom: -120px
+		background-color: transparent
+	.header__logo-img
+		margin-top: 35px
+		margin-bottom: 0px
+	.upper-form__container
+		margin-top: 25%
+	.upper-form__background
+		height: 110vh
+		width: auto
+		background-size: cover
+	h2.upper-form__sub-title
+		padding-right: 160px
+	.upper-form__wrap
+		display: block
+	h1.reasons__title
+		padding:
+			left: 154px
+			right: 154px
+	h2.reasons_sub-title
+		padding:
+			left: 276px
+			right: 276px
+	.reasons__container-wrap
+		margin-bottom: 0px
+	.reasons__container-title
+		text-align: center
+	.reasons__container-sub-title
+		text-align: center
+	.reasons__container-icon
+		margin-left: calc(50% - 45px)
+	.container-icon__picture
+		border-radius: 7px
+	.schemes__first-row
+		flex-direction: row
+	.schemes__second-row
+		flex-direction: row-reverse
+	.schemes__third-row
+		flex-direction: row
+	.schemes__block
+		margin-top: 0
+		margin-bottom: 0
+	.schemes__second-row .schemes__block
+		margin-top: -31px * 2
+		margin-bottom: -31px * 2
+	.schemes__text-link
+		opacity: 0.8
+		font-family: SFUIDisplay
+		font-size: 9px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #000000
+		text-decoration: none
+		position: relative
+		margin:
+			left: 59px
+		padding:
+			left: 13px * 2
+		&:after
+			content: ""
+			position: absolute
+			width: 59px * 2
+			border-bottom: 2px solid #979797
+			left: -59px * 2
+			top: 50%
+		&:hover
+			text-decoration: none
+			color: #000000
+	.schemes__text-link.scheme-picture_right
+		position: relative
+		text-align: right
+		margin:
+			right: 59px
+		padding:
+			right: 13px * 2
+		&:after
+			position: absolute
+			left: 100%
+			right: -59px * 2
+			z-index: 1
+	.lower-form__title
+		padding:
+			top: 36px
+		margin:
+			left: auto
+			right: auto
+	.upper-form__block
+		display: flex
+		position: relative
+	.upper-form__field-block
+		flex-basis: 37%
+		flex-grow: 0
+		flex-shrink: 0
+		position: relative
+	.upper-form__field-block:nth-child(2)
+		padding-left: 20px
+	.upper-form__button
+		flex-basis: auto
+		border-radius:  0 3.5px 3.5px 0
+		background-color: #540cfa
+		border: 1px solid #540cfa
+		font-family: SFUIDisplay
+		font-size: 8px * 2
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #ffffff
+		padding-left: 10.5px
+		padding-right: 10.5px
+	.upper-form__field.field-phone
+		border-radius: 3.5px 0 0 3.5px
