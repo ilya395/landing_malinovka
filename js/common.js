@@ -1,14 +1,3 @@
-var inputmask = $('.phonemask');
-    
-    Inputmask.extendDefinitions({
-      'f': {"validator": "[9\(\)\.\+/ ]"}
-    });
-    
- if (inputmask.length) {
-  inputmask.inputmask({
-   mask: "+7(f99)999-99-99"
-  }); 
- }
 
 $(document).ready(function() {
 
@@ -46,4 +35,17 @@ $(document).ready(function() {
 		$('.big-modal__section').css('display', 'block');
 	});
 
+    var inputmask = $('.phonemask');
+    
+    Inputmask.extendDefinitions({
+      'f': {"validator": "[9\(\)\.\+/ ]"}
+    });
+    
+    if (inputmask.length) {
+    	inputmask.inputmask({
+    		mask: "+7(f99)999-99-99"
+    	});	
+    };
+
 });
+
